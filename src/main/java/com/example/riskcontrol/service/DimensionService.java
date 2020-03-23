@@ -211,6 +211,7 @@ public class DimensionService {
      * @return
      */
     public int distinctCount(Event event, String[] condDimensions, EnumTimePeriod enumTimePeriod, String aggrDimension) {
+        int count = distinctCountWithRedis(event, condDimensions, enumTimePeriod, aggrDimension);
         return distinctCountWithRedis(event, condDimensions, enumTimePeriod, aggrDimension);
     }
 
